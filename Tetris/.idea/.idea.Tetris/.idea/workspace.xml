@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Vector2Extension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Code/States/BaseState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/MenuState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/MenuBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/StateBase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/Lobby.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/EndgameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/TestScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Vector2Extension.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ksKk6qoBqm5CInuE0IemA2pQmz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="" />
+      <created>1606483999743</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606483999743</updated>
+      <workItem from="1606484008659" duration="45072000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="531" y="148" key="RiderGenerateDialog" timestamp="1606570334540">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="531" y="148" key="RiderGenerateDialog/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1606570334540" />
+    <state x="220" y="63" key="SettingsEditor" timestamp="1606645785447">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="220" y="63" key="SettingsEditor/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1606645785447" />
+  </component>
+</project>
