@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Column
 {
-    public Transform[] _row = new Transform[20];
+    public Transform[] _columnTransform = new Transform[20];
 }
 public class GridManager : MonoBehaviour
 {
@@ -19,13 +19,12 @@ public class GridManager : MonoBehaviour
 
     public void PlaceShape()
     {
-        int y = 0;
-        StartCoroutine(DeleteRows(y));
+        StartCoroutine(DeleteRows());
     }
 
-    private IEnumerator DeleteRows(int k)
+    private IEnumerator DeleteRows()
     {
-        for (int y = k; y < 20; ++y)
+        for (int y = 0; y < 20; ++y)
         {
             if (IsRowFull(y))
             {
@@ -52,7 +51,7 @@ public class GridManager : MonoBehaviour
     {
         for (int i = 0; i < 10; ++i)
         {
-            if (_columns[i]._row[rowNumber] == null)
+            if (_columns[i]._columnTransform[rowNumber] == null)
             {
                 return false;
             }
@@ -66,8 +65,8 @@ public class GridManager : MonoBehaviour
         Debug.Log("deleting row");
         for (int i = 0; i < 10; ++i)
         {
-            Destroy(_columns[i]._row[rowNumber].gameObject);
-            _columns[i]._row[rowNumber] = null;
+            Destroy(_columns[i]._columnTransform[rowNumber].gameObject);
+            _columns[i]._columnTransform[rowNumber] = null;
         }
     }
 
@@ -83,11 +82,11 @@ public class GridManager : MonoBehaviour
     {
         for (int i = 0; i < 10; ++i)
         {
-            if (_columns[i]._row[y] != null)
+            if (_columns[i]._columnTransform[y] != null)
             {
-                _columns[i]._row[y - 1] = _columns[i]._row[y];
-                _columns[i]._row[y] = null;
-                _columns[i]._row[y - 1].position += new Vector3(0, -1, 0);
+                _columns[i]._columnTransform[y - 1] = _columns[i]._columnTransform[y];
+                _columns[i]._columnTransform[y] = null;
+                _columns[i]._columnTransform[y - 1].position += new Vector3(0, -1, 0);
             }
         }
     }
@@ -105,8 +104,8 @@ public class GridManager : MonoBehaviour
                     return false;
                 }
 
-                if (_columns[(int) childVector.x]._row[(int) childVector.y] != null && //TODO do we really need this?
-                    _columns[(int) childVector.x]._row[(int) childVector.y].parent != obj)
+                if (_columns[(int) childVector.x]._columnTransform[(int) childVector.y] != null &&
+                    _columns[(int) childVector.x]._columnTransform[(int) childVector.y].parent != obj)
                 {
                     Debug.Log("Some other reason");
                     return false;
@@ -123,11 +122,11 @@ public class GridManager : MonoBehaviour
         {
             for (int j = 0; j < 10; j++)
             {
-                if (_columns[j]._row[i] != null)
+                if (_columns[j]._columnTransform[i] != null)
                 {
-                    if (_columns[j]._row[i].parent == obj)
+                    if (_columns[j]._columnTransform[i].parent == obj)
                     {
-                        _columns[j]._row[i] = null;
+                        _columns[j]._columnTransform[i] = null;
                     }
                 }
             }
@@ -138,7 +137,7 @@ public class GridManager : MonoBehaviour
             if (child.gameObject.tag.Equals("Block"))
             {
                 Vector2 childVector = Vector2Extension.roundVector2(child.position);
-                _columns[(int) childVector.x]._row[(int) childVector.y] = child;
+                _columns[(int) childVector.x]._columnTransform[(int) childVector.y] = child;
             }
         }
     }
@@ -149,10 +148,10 @@ public class GridManager : MonoBehaviour
         {
             for (int j = 0; j < 10; j++)
             {
-                if (_columns[j]._row[i] != null)
+                if (_columns[j]._columnTransform[i] != null)
                 {
-                    Destroy(_columns[j]._row[i].gameObject);
-                    _columns[j]._row[i] = null;
+                    Destroy(_columns[j]._columnTransform[i].gameObject);
+                    _columns[j]._columnTransform[i] = null;
                 }
             }
         }

@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="" />
+    <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Vector2Extension.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/TestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Vector2Extension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -28,7 +37,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/MenuBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/StateBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/Lobby.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" />
@@ -40,13 +48,15 @@
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ksKk6qoBqm5CInuE0IemA2pQmz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -87,6 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
+      <workItem from="1606682274551" duration="164000" />
+      <workItem from="1606682535849" duration="1408000" />
     </task>
     <servers />
   </component>
