@@ -20,8 +20,8 @@ public class SpawnManager : MonoBehaviour
             _spawnedShape = _plannedShape;
         }
         Managers.GameManager.CurrentShape = _spawnedShape.GetComponent<Shape>();
-        _spawnedShape.transform.parent = Managers.GameManager.BlockHolder;
-        _spawnedShape.transform.position = Managers.GameManager.BlockHolder.position;
+        _spawnedShape.transform.parent = Managers.GameManager.ShapeParent;
+        _spawnedShape.transform.position = Managers.GameManager.ShapeParent.position;
         _spawnedShape.GetComponent<Shape>().enabled = true;
         Managers.InputManager.IsActive = true;
         SpawnPlannedPrefab();

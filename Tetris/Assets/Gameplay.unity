@@ -1269,7 +1269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622217211}
   m_Layer: 0
-  m_Name: BlockHolder
+  m_Name: ShapeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fb7ae0c07ff4c04b8f9d3e1ad491d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blockHolder: {fileID: 622217211}
+  _shapeParent: {fileID: 622217211}
   _plannedShape: {fileID: 1772721492}
 --- !u!4 &1098129019
 Transform:

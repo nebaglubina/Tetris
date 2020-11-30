@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Transform _blockHolder;
+    [SerializeField] Transform _shapeParent;
     [SerializeField] private Transform _plannedShape;
     
     private bool _isGameActive;
     private Shape _currentShape;
     private StateBase _currentState;
 
-    public Transform BlockHolder => _blockHolder;
+    public Transform ShapeParent => _shapeParent;
     public StateBase CurrentState => _currentState;
     public Transform PlannedShape => _plannedShape;
 
