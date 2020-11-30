@@ -27,5 +27,6 @@ public class GameplayState : StateBase
     {
         Managers.SpawnManager.Spawn();
         Managers.GameManager.IsGameActive = true;
+        Managers.UIManager.SetUIMenu(Menus.Gameplay);
     }
 }

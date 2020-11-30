@@ -24,6 +24,7 @@ public class GridManager : MonoBehaviour
 
     private IEnumerator DeleteRows()
     {
+        var fullRowsCount = 0;
         for (int y = 0; y < 20; ++y)
         {
             if (IsRowFull(y))
@@ -31,8 +32,13 @@ public class GridManager : MonoBehaviour
                 DeleteRow(y);
                 DecreaseRowsAbove(y+1);
                 --y;
+                fullRowsCount++;
                 yield return new WaitForSeconds(0.5f);
             }
+        }
+        if (fullRowsCount > 0)
+        {
+            Managers.ScoreManager.AddLineScore(fullRowsCount);
         }
 
         foreach (Transform t in Managers.GameManager.BlockHolder)
