@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gameplay.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +47,11 @@
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +98,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="7344000" />
+      <workItem from="1606682535849" duration="8130000" />
     </task>
     <servers />
   </component>

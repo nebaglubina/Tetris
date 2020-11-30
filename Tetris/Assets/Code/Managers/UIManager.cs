@@ -36,9 +36,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateUIScore(int scoreValue)
+    public void UpdateUIScore(int scoreValue, int lines)
     {
         _gameplayMenu.ScoreText.SetText(scoreValue.ToString());
+        _gameplayMenu.LinesText.SetText(lines.ToString());
     }
 
     private void SetLobbyMenu()
