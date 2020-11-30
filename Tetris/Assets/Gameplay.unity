@@ -399,7 +399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bd2c19147a9c4ce6b22d0c5d1c27b5a, type: 2}
   m_sharedMaterial: {fileID: 21200109905714790, guid: 2bd2c19147a9c4ce6b22d0c5d1c27b5a,
@@ -469,7 +469,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 171365106}
-    characterCount: 2
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 9999
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2bd2c19147a9c4ce6b22d0c5d1c27b5a, type: 2}
   m_sharedMaterial: {fileID: 21200109905714790, guid: 2bd2c19147a9c4ce6b22d0c5d1c27b5a,
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 231712799}
-    characterCount: 4
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -1036,6 +1036,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 231712799}
+  linesText: {fileID: 171365106}
 --- !u!1 &652396094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +2017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lineScore: 100
-  _lineScoreMultiplier: 20
+  _lineScoreMultiplier: 1.2
 --- !u!114 &1098129016
 MonoBehaviour:
   m_ObjectHideFlags: 0
