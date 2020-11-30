@@ -27,6 +27,7 @@
             <e p="EndgameState.cs" t="Include" />
             <e p="GameplayState.cs" t="Include" />
             <e p="LobbyState.cs" t="Include" />
+            <e p="PauseState.cs" t="Include" />
             <e p="StateBase.cs" t="Include" />
           </e>
           <e p="TestScript.cs" t="Include" />

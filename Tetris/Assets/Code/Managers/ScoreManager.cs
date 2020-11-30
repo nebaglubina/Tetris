@@ -8,7 +8,6 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private float _lineScoreMultiplier;
     private int _score;
     private int _lines;
-    public int Score => _score;
     public void AddLineScore(int linesCount)
     {
         Debug.Log($"adding score for {linesCount} lines");
@@ -23,5 +22,11 @@ public class ScoreManager : MonoBehaviour
         }
         _lines += linesCount;
         Managers.UIManager.UpdateUIScore(_score, _lines);
+    }
+
+    public void ResetScore()
+    {
+        _score = 0;
+        _lines = 0;
     }
 }

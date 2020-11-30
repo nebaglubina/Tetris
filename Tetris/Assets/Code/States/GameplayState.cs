@@ -7,6 +7,10 @@ public class GameplayState : StateBase
     
     public override void Activate()
     {
+        if (Managers.GameManager.IsGameActive)
+        {
+            return;
+        }
         StartGameplay();
     }
 

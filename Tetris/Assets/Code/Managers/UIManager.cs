@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
 
     private void SetEndgameMenu()
     {
-        
+        Debug.Log("EndGameMenu setting");
         _gameplayMenu.gameObject.SetActive(false);
         _endgameMenu.gameObject.SetActive(true);
         _lobbyMenu.gameObject.SetActive(false);

@@ -73,7 +73,6 @@ public class ShapeMovement : MonoBehaviour
                 if (child.tag.Equals("Block"))
                 {
                     Vector2 vec = child.position;
-                    Debug.Log(vec);
                 }
             }
             GetComponent<ShapeMovement>().enabled = false;

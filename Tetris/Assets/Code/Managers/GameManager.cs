@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         if (_currentState != null)
         {
             _currentState.Activate();
+            Debug.Log($"Activating state: {state}");
         }
     }
 
