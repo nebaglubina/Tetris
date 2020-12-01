@@ -4,14 +4,8 @@ using Zenject;
 
 public class InputManager : IInputManager
 {
-    private bool isActive;
     private ShapeMovement _shapeMovement;
-
-    public bool IsActive
-    {
-        get => isActive;
-        set => isActive = value;
-    }
+    
 
     public InputManager(ShapeMovement shapeMovement)
     {
@@ -19,8 +13,7 @@ public class InputManager : IInputManager
     }
     public void Tick()
     {
-        if (!isActive) return;
-        
+
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             _shapeMovement.RotateShape(false);

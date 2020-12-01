@@ -9,6 +9,7 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Blocks" t="Include">
+            <e p="Column.cs" t="Include" />
             <e p="Shape.cs" t="Include" />
             <e p="ShapeMovement.cs" t="Include" />
           </e>

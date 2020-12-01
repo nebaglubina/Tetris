@@ -6,32 +6,19 @@ using Zenject;
 
 public class GameManager : MonoBehaviour, IGameManager
 {
-    [SerializeField] Transform _shapeParent;
-    [SerializeField] private Transform _plannedShape;
-    
     private bool _isGameActive;
-    private Shape _currentShape;
     [Inject]
     private IState _currentState;
     //private GameplayState _gameplayState;
 
-
-    public Transform ShapeParent => _shapeParent;
+    
     public IState CurrentState => _currentState;
-    public Transform PlannedShape => _plannedShape;
 
     public bool IsGameActive
     {
         get => _isGameActive;
         set => _isGameActive = value;
     }
-
-    public Shape CurrentShape
-    {
-        get => _currentShape;
-        set => _currentShape = value;
-    }
-
 
     private void Awake()
     {

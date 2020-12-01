@@ -4,27 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-[Serializable]
-public class Column
+public class GridManager: IInitializable
 {
-    public Transform[] _columnTransform = new Transform[20];
-}
-public class GridManager : MonoBehaviour
-{
-    public Column[] _columns = new Column[10];
+    private Column[] _columns = new Column[10];
 
-    private IGameManager _gameManager;
+    
     private ScoreManager _scoreManager;
-    private SpawnManager _spawnManager;
 
-
-    [Inject]
-    public void Construct (IGameManager gameManager, ScoreManager scoreManager, SpawnManager spawnManager)
+    public GridManager(ScoreManager scoreManager)
     {
-        _gameManager = gameManager;
         _scoreManager = scoreManager;
-        _spawnManager = spawnManager;
     }
+    
+    public void Initialize()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            _columns[i] = new Column(new Transform[20]);
+        }
+    }
+    
 
     public bool IsInsideBoard(Vector2 position)
     {
@@ -32,6 +31,7 @@ public class GridManager : MonoBehaviour
     }
     public bool IsValidGridPosition(Transform shape)
     {
+
         foreach (Transform child in shape)
         {
             if (child.gameObject.tag.Equals("Block"))
@@ -41,7 +41,6 @@ public class GridManager : MonoBehaviour
                 {
                     return false;
                 }
-
                 if (_columns[(int) childVector.x]._columnTransform[(int) childVector.y] != null &&
                     _columns[(int) childVector.x]._columnTransform[(int) childVector.y].parent != shape)
                 {
@@ -56,7 +55,7 @@ public class GridManager : MonoBehaviour
 
     public void PlaceShape()
     {
-        StartCoroutine(DeleteRows());
+        DeleteRows();
     }
     
     public void UpdateGrid(Transform shape)
@@ -84,7 +83,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private IEnumerator DeleteRows()
+    private void DeleteRows()
     {
         var fullRowsCount = 0;
         for (int y = 0; y < 20; y++)
@@ -95,7 +94,6 @@ public class GridManager : MonoBehaviour
                 DecreaseRowsAbove(y+1);
                 y--;
                 fullRowsCount++;
-                yield return new WaitForSeconds(0.5f);
             }
         }
         if (fullRowsCount > 0)
@@ -103,16 +101,7 @@ public class GridManager : MonoBehaviour
             _scoreManager.AddLineScore(fullRowsCount);
         }
 
-        foreach (Transform block in _gameManager.ShapeParent)
-        {
-            if (block.childCount <= 1)
-            {
-                Debug.Log($"Destroying {block.gameObject}");
-                Destroy(block.gameObject);
-            }
-        }
-
-        _spawnManager.Spawn();
+        EventsObserver.Publish(new ISpawnEvent());
     }
 
     private bool IsRowFull(int transformY)
@@ -133,7 +122,7 @@ public class GridManager : MonoBehaviour
         Debug.Log("deleting row");
         for (int i = 0; i < 10; ++i)
         {
-            Destroy(_columns[i]._columnTransform[transformY].gameObject);
+            GameObject.Destroy(_columns[i]._columnTransform[transformY].gameObject);
             _columns[i]._columnTransform[transformY] = null;
         }
     }
@@ -167,15 +156,10 @@ public class GridManager : MonoBehaviour
             {
                 if (_columns[j]._columnTransform[i] != null)
                 {
-                    Destroy(_columns[j]._columnTransform[i].gameObject);
+                    GameObject.Destroy(_columns[j]._columnTransform[i].gameObject);
                     _columns[j]._columnTransform[i] = null;
                 }
             }
-        }
-
-        foreach (Transform shape in _gameManager.ShapeParent)
-        {
-            Destroy(shape.gameObject);
         }
     }
 }

@@ -6,11 +6,10 @@ using Zenject;
 public class GameplayState : IState
 {
     private ShapeMovement _shapeMovement;
-    private SpawnManager _spawnManager;
-    public GameplayState(ShapeMovement shapeMovement, SpawnManager spawnManager)
+    
+    public GameplayState(ShapeMovement shapeMovement)
     {
         _shapeMovement = shapeMovement;
-        _spawnManager = spawnManager;
     }
     
     public void Initialize()
@@ -34,7 +33,7 @@ public class GameplayState : IState
     
     private void StartGameplay()
     {
-        _spawnManager.Spawn();
+        EventsObserver.Publish(new ISpawnEvent());
         // Managers.GameManager.IsGameActive = true;
         // Managers.UIManager.SetUIMenu(Menus.Gameplay);
     }

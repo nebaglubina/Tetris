@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿
 
-public interface ISpawnEvent : IEvent
+public class ISpawnEvent : IEvent
 {
-
 }

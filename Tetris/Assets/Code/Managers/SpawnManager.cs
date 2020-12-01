@@ -1,54 +1,72 @@
 ﻿
+using System;
 using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] private ShapeTypesData _shapeTypesData;
-
+    [SerializeField] private Transform _shapeParentTransform;
+    [SerializeField] private Transform _plannedShapeTransform;
+    
     private GameObject _plannedShape;
     private GameObject _spawnedShape;
-    private IInputManager _inputManager;
-    private IGameManager _gameManager;
-    private ShapeMovement _shapeMovement;
+    [Inject] private ShapeMovement _shapeMovement;
 
-    [Inject]
-    private void Construct(IInputManager inputManager, IGameManager gameManager, ShapeMovement shapeMovement)
+    private void OnEnable()
     {
-        _inputManager = inputManager;
-        _gameManager = gameManager;
-        _shapeMovement = shapeMovement;
+        EventsObserver.AddEventListener<ISpawnEvent>(Spawn);
     }
-    public void Spawn()
+
+    private void OnDisable()
     {
+        EventsObserver.RemoveEventListener<ISpawnEvent>(Spawn);
+    }
+
+    private void Spawn(ISpawnEvent e)
+    {
+        foreach (Transform block in _shapeParentTransform)
+        {
+            if (block.childCount <= 1)
+            {
+                Debug.Log($"Destroying {block.gameObject}");
+                Destroy(block.gameObject);
+            }
+        }
+        
         if (_plannedShape == null)
         {
             var randomShapeIndex = Random.Range(0, _shapeTypesData.ShapePrefabs.Length);
-            _spawnedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex]);
+            _spawnedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform);
         }
         else
         {
             _spawnedShape = _plannedShape;
         }
-        _gameManager.CurrentShape = _spawnedShape.GetComponent<Shape>();
-        _spawnedShape.transform.parent = _gameManager.ShapeParent;
-        _spawnedShape.transform.position = _gameManager.ShapeParent.position;
+
         var shape = _spawnedShape.GetComponent<Shape>();
         shape.enabled = true;
-        _inputManager.IsActive = true;
         _shapeMovement.SetTarget(shape);
-        SpawnPlannedPrefab();
+        //SpawnPlannedPrefab();
     }
 
     private void SpawnPlannedPrefab()
     {
-        foreach (Transform child in _gameManager.PlannedShape)
+        if (_plannedShape != null)
         {
-            Destroy(child.gameObject);
+            Destroy(_plannedShape.gameObject);
         }
         var randomShapeIndex = Random.Range(0, _shapeTypesData.ShapePrefabs.Length);
-        _plannedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex]);
-        _plannedShape.transform.parent = _gameManager.PlannedShape;
-        _plannedShape.transform.position = _gameManager.PlannedShape.position;
+        _plannedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _plannedShapeTransform.position, Quaternion.identity, _plannedShapeTransform);
     }
+
+    private void ClearParentTransform()
+    {
+        foreach (Transform shape in _shapeParentTransform)
+        {
+            Destroy(shape.gameObject);
+        }
+    }
+    
 }
