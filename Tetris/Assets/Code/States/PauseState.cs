@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PauseState : StateBase
+public class PauseState : IState
 {
-    public override void Activate()
+    public void Initialize()
+    {
+        Debug.Log("Initializing pausestate");
+    }
+
+    public void Tick()
     {
         
     }
 
-    public override void Deactivate()
+    public void Dispose()
     {
-
-    }
-
-    public override void StateUpdate()
-    {
-
+        
     }
 }

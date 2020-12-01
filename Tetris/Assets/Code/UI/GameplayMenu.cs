@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class GameplayMenu : MenuBase
 {
@@ -12,6 +11,15 @@ public class GameplayMenu : MenuBase
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _unpauseButton;
     [SerializeField] private GameObject _pausePanel;
+    private IStateFactory _stateFactory;
+    private IGameManager _gameManager;
+
+    [Inject]
+    private void Construct(IStateFactory stateFactory, IGameManager gameManager)
+    {
+        _stateFactory = stateFactory;
+        _gameManager = gameManager;
+    }
 
     private void OnEnable()
     {
@@ -39,13 +47,17 @@ public class GameplayMenu : MenuBase
 
     public void SetPause()
     {
-        Managers.GameManager.SetState(typeof(PauseState));
+        //Managers.GameManager.SetState(new PauseState());//Todo
+        var state = _stateFactory.Create<PauseState>();
+        _gameManager.SetState(state);
         _pausePanel.SetActive(true);
     }
 
     public void SetUnpause()
     {
-        Managers.GameManager.SetState(typeof(GameplayState));
+        //Managers.GameManager.SetState(new GameplayState());//todo
+        var state = _stateFactory.Create<GameplayState>();
+        _gameManager.SetState(state);
         _pausePanel.SetActive(false);
     }
 }

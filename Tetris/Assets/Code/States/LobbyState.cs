@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LobbyState : StateBase
+public class LobbyState : IState
 {
-    public override void Activate()
+    public void Initialize()
     {
-
+        Debug.Log("Initializing lobby");
     }
 
-    public override void Deactivate()
+    public void Tick()
     {
-
+        
     }
 
-    public override void StateUpdate()
+    public void Dispose()
     {
-
+        
     }
 }

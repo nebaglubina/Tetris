@@ -24,23 +24,13 @@ public class Shape : MonoBehaviour
         set => _shapeMovement = value;
     }
 
-    public Shape(ShapeMovement shapeMovement)
-    {
-        _shapeMovement = shapeMovement;
-    }
 
-    private void Awake()
-    {
-        _shapeMovement = GetComponent<ShapeMovement>();
-    }
-
-
-    private void Start()
-    {
-        if (!Managers.GridManager.IsValidGridPosition(transform))
-        {
-            Managers.GameManager.SetState(typeof(EndgameState));
-            Destroy(gameObject);
-        }
-    }
+    // private void Start()
+    // {
+    //     if (!Managers.GridManager.IsValidGridPosition(transform))
+    //     {
+    //         Managers.GameManager.SetState(new EndgameState());
+    //         Destroy(gameObject);
+    //     }
+    // }
 }

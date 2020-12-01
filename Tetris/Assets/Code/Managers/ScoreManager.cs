@@ -1,13 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManager
 {
-    [SerializeField] private int _lineScore;
-    [SerializeField] private float _lineScoreMultiplier;
+    private int _lineScore = 100;
+    private float _lineScoreMultiplier = 1.2f;
     private int _score;
     private int _lines;
+    
+
+
     public void AddLineScore(int linesCount)
     {
         Debug.Log($"adding score for {linesCount} lines");

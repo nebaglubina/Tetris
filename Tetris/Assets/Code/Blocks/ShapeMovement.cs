@@ -3,23 +3,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShapeMovement : MonoBehaviour
+public class ShapeMovement
 {
     private Transform _rotationPivot;
     private float _normalTransitionInterval = 0.5f;
     private float _fastTransitionInterval = 0.2f;
     private float currentTransitionInterval = 0.5f;
     private float lastFallTime;
-
-    private void Awake()
+    private Shape _shape;
+    private GridManager _gridManager;
+    
+    public ShapeMovement (GridManager gridManager)
     {
+        _gridManager = gridManager;
+    }
+
+    public void SetTarget(Shape shape)
+    {
+        _shape = shape;
         currentTransitionInterval = _normalTransitionInterval;
-        _rotationPivot = transform.Find("Pivot");
+        _rotationPivot = shape.transform.Find("Pivot");
     }
 
     public void ShapeUpdate()
     {
-        FreeFall();
+        if (_shape == null)
+        {
+            return;
+        }
+            FreeFall();
     }
 
     public void FastFall(bool isEnabled)
@@ -29,28 +41,36 @@ public class ShapeMovement : MonoBehaviour
 
     public void MoveHorizontal(Vector3 direction)
     {
-        transform.position += direction;
-        if (Managers.GridManager.IsValidGridPosition(transform))
+        if (_shape == null)
         {
-            Managers.GridManager.UpdateGrid(transform);
+            return;
+        }
+        _shape.transform.position += direction;
+        if (_gridManager.IsValidGridPosition(_shape.transform))
+        {
+            _gridManager.UpdateGrid(_shape.transform);
         }
         else
         {
-            transform.position -= direction;
+            _shape.transform.position -= direction;
         }
     }
 
     public void RotateShape(bool isClockwise)
     {
-        float rotationDegree = isClockwise ? 90.0f : -90.0f;
-        transform.RotateAround(_rotationPivot.position, Vector3.forward, rotationDegree);
-        if (Managers.GridManager.IsValidGridPosition(transform))
+        if (_shape == null)
         {
-            Managers.GridManager.UpdateGrid(transform);
+            return;
+        }
+        float rotationDegree = isClockwise ? 90.0f : -90.0f;
+        _shape.transform.RotateAround(_rotationPivot.position, Vector3.forward, rotationDegree);
+        if (_gridManager.IsValidGridPosition(_shape.transform))
+        {
+            _gridManager.UpdateGrid(_shape.transform);
         }
         else
         {
-            transform.RotateAround(_rotationPivot.position, Vector3.forward, -rotationDegree);
+            _shape.transform.RotateAround(_rotationPivot.position, Vector3.forward, -rotationDegree);
         }
     }
 
@@ -58,27 +78,26 @@ public class ShapeMovement : MonoBehaviour
     {
         if (!(Time.time - lastFallTime >= currentTransitionInterval)) return;
         
-        transform.position += Vector3.down;
+        _shape.transform.position += Vector3.down;
             
-        if (Managers.GridManager.IsValidGridPosition(transform))
+        if (_gridManager.IsValidGridPosition(_shape.transform))
         {
-            Managers.GridManager.UpdateGrid(transform);
+            _gridManager.UpdateGrid(_shape.transform);
         }
         else
         {
-            transform.position += Vector3.up;
+            _shape.transform.position += Vector3.up;
 
-            foreach (Transform child in this.transform)
+            foreach (Transform child in _shape.transform)
             {
                 if (child.tag.Equals("Block"))
                 {
                     Vector2 vec = child.position;
                 }
             }
-            GetComponent<ShapeMovement>().enabled = false;
-            GetComponent<Shape>().enabled = false;
-            Managers.GameManager.CurrentShape = null;
-            Managers.GridManager.PlaceShape();
+            
+            _shape.GetComponent<Shape>().enabled = false;
+            _gridManager.PlaceShape();
         }
 
         lastFallTime = Time.time;

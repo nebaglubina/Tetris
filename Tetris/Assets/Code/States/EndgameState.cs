@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndgameState : StateBase
+public class EndgameState : IState
 {
-    public override void Activate()
+    public void Initialize()
     {
-     Managers.UIManager.SetUIMenu(Menus.Endgame);
-     Managers.GameManager.IsGameActive = false;
+        Debug.Log("Initializing endgame");
+        Managers.UIManager.SetUIMenu(Menus.Endgame);
+        Managers.GameManager.IsGameActive = false;
     }
 
-    public override void Deactivate()
+    public void Tick()
     {
         
     }
 
-    public override void StateUpdate()
+    public void Dispose()
     {
         
     }

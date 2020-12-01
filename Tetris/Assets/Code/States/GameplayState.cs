@@ -1,36 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class GameplayState : StateBase
+public class GameplayState : IState
 {
-    
-    public override void Activate()
+    private ShapeMovement _shapeMovement;
+    private SpawnManager _spawnManager;
+    public GameplayState(ShapeMovement shapeMovement, SpawnManager spawnManager)
     {
-        if (Managers.GameManager.IsGameActive)
-        {
-            return;
-        }
+        _shapeMovement = shapeMovement;
+        _spawnManager = spawnManager;
+    }
+    
+    public void Initialize()
+    {
+        Debug.Log("Initializing gameplay");
+        // if (Managers.GameManager.IsGameActive)
+        // {
+        //     return;
+        // }
         StartGameplay();
     }
 
-    public override void Deactivate()
+    public void Tick()
+    {
+        _shapeMovement.ShapeUpdate();
+    }
+    public void Dispose()
     {
 
     }
-
-    public override void StateUpdate()
-    {
-        if (Managers.GameManager.CurrentShape != null)
-        {
-            Managers.GameManager.CurrentShape.ShapeMovement.ShapeUpdate();
-        }
-    }
-
+    
     private void StartGameplay()
     {
-        Managers.SpawnManager.Spawn();
-        Managers.GameManager.IsGameActive = true;
-        Managers.UIManager.SetUIMenu(Menus.Gameplay);
+        _spawnManager.Spawn();
+        // Managers.GameManager.IsGameActive = true;
+        // Managers.UIManager.SetUIMenu(Menus.Gameplay);
     }
 }

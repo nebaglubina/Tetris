@@ -12,32 +12,48 @@
             <e p="Shape.cs" t="Include" />
             <e p="ShapeMovement.cs" t="Include" />
           </e>
+          <e p="Extensions" t="Include">
+            <e p="CustomEvents" t="Include">
+              <e p="ISpawnEvent.cs" t="Include" />
+            </e>
+            <e p="Observer" t="Include">
+              <e p="EventsObserver.cs" t="Include" />
+              <e p="IDeferredAction.cs" t="Include" />
+              <e p="IEvent.cs" t="Include" />
+              <e p="PublishDeferredAction.cs" t="Include" />
+              <e p="RemoveDeferredAction.cs" t="Include" />
+            </e>
+          </e>
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="GridManager.cs" t="Include" />
             <e p="InputManager.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IGameManager.cs" t="Include" />
+              <e p="IInputManager.cs" t="Include" />
+            </e>
             <e p="Managers.cs" t="Include" />
             <e p="ScoreManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
           </e>
           <e p="MyMonoInstaller.cs" t="Include" />
+          <e p="ShapeTypesData.cs" t="Include" />
           <e p="States" t="Include">
             <e p="EndgameState.cs" t="Include" />
             <e p="GameplayState.cs" t="Include" />
+            <e p="IState.cs" t="Include" />
             <e p="LobbyState.cs" t="Include" />
             <e p="PauseState.cs" t="Include" />
-            <e p="StateBase.cs" t="Include" />
+            <e p="StateFactory.cs" t="Include" />
           </e>
-          <e p="TestScript.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="EndgameMenu.cs" t="Include" />
             <e p="GameplayMenu.cs" t="Include" />
             <e p="LobbyMenu.cs" t="Include" />
             <e p="MenuBase.cs" t="Include" />
           </e>
-          <e p="Vector2Extension.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">

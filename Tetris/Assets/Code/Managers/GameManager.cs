@@ -2,18 +2,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour, IGameManager
 {
     [SerializeField] Transform _shapeParent;
     [SerializeField] private Transform _plannedShape;
     
     private bool _isGameActive;
     private Shape _currentShape;
-    private StateBase _currentState;
+    [Inject]
+    private IState _currentState;
+    //private GameplayState _gameplayState;
+
 
     public Transform ShapeParent => _shapeParent;
-    public StateBase CurrentState => _currentState;
+    public IState CurrentState => _currentState;
     public Transform PlannedShape => _plannedShape;
 
     public bool IsGameActive
@@ -28,26 +32,34 @@ public class GameManager : MonoBehaviour
         set => _currentShape = value;
     }
 
+
     private void Awake()
     {
         _isGameActive = false;
     }
 
+    // [Inject]
+    // private void Construct(GameplayState gameplayState)
+    // {
+    //     
+    // }
+
     private void Start()
     {
-        SetState(typeof(GameplayState));
+        SetState(_currentState);
     }
 
-    public void SetState(System.Type state)
+    public void SetState(IState state)
     {
         if (_currentState != null)
         {
-            _currentState.Deactivate();
+            _currentState.Dispose();
         }
-        _currentState = GetComponentInChildren(state) as StateBase;
+
+        _currentState = state;
         if (_currentState != null)
         {
-            _currentState.Activate();
+            _currentState.Initialize();
             Debug.Log($"Activating state: {state}");
         }
     }
@@ -56,7 +68,7 @@ public class GameManager : MonoBehaviour
     {
         if (_currentState != null)
         {
-            _currentState.StateUpdate();
+            _currentState.Tick();
         }
     }
 }

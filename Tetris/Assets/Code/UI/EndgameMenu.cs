@@ -24,6 +24,6 @@ public class EndgameMenu : MenuBase
     {
         Managers.GridManager.ClearBoard();
         Managers.ScoreManager.ResetScore();
-        Managers.GameManager.SetState(typeof(GameplayState));
+        //Managers.GameManager.SetState(new GameplayState()); //TODO
     }
 }

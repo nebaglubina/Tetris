@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 [Serializable]
 public class Column
@@ -11,6 +12,19 @@ public class Column
 public class GridManager : MonoBehaviour
 {
     public Column[] _columns = new Column[10];
+
+    private IGameManager _gameManager;
+    private ScoreManager _scoreManager;
+    private SpawnManager _spawnManager;
+
+
+    [Inject]
+    public void Construct (IGameManager gameManager, ScoreManager scoreManager, SpawnManager spawnManager)
+    {
+        _gameManager = gameManager;
+        _scoreManager = scoreManager;
+        _spawnManager = spawnManager;
+    }
 
     public bool IsInsideBoard(Vector2 position)
     {
@@ -86,10 +100,10 @@ public class GridManager : MonoBehaviour
         }
         if (fullRowsCount > 0)
         {
-            Managers.ScoreManager.AddLineScore(fullRowsCount);
+            _scoreManager.AddLineScore(fullRowsCount);
         }
 
-        foreach (Transform block in Managers.GameManager.ShapeParent)
+        foreach (Transform block in _gameManager.ShapeParent)
         {
             if (block.childCount <= 1)
             {
@@ -98,7 +112,7 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        Managers.SpawnManager.Spawn();
+        _spawnManager.Spawn();
     }
 
     private bool IsRowFull(int transformY)
@@ -159,7 +173,7 @@ public class GridManager : MonoBehaviour
             }
         }
 
-        foreach (Transform shape in Managers.GameManager.ShapeParent)
+        foreach (Transform shape in _gameManager.ShapeParent)
         {
             Destroy(shape.gameObject);
         }

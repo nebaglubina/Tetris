@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3355869847899027442}
   - component: {fileID: 5908863798184064246}
-  - component: {fileID: 8303107731730819201}
   m_Layer: 0
   m_Name: Shape_O
   m_TagString: Untagged
@@ -49,21 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 556fc888fb04546dfb5be09cca56ac86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8303107731730819201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3355869847899027453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e017cbd5f6c3241aab3140d59b76c42f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rotationPivot: {fileID: 2145299922082430931}
-  _normalTransitionInterval: 0.5
-  _fastTransitionInterval: 0.2
 --- !u!1 &8087897440408184835
 GameObject:
   m_ObjectHideFlags: 0
