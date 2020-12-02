@@ -6,15 +6,17 @@ using Zenject;
 public class GameplayState : IState
 {
     private ShapeMovement _shapeMovement;
+    private UIManager _uiManager;
     
-    public GameplayState(ShapeMovement shapeMovement)
+    public GameplayState(ShapeMovement shapeMovement, UIManager uiManager)
     {
         _shapeMovement = shapeMovement;
+        _uiManager = uiManager;
     }
     
     public void OnStateInitialize()
     {
-        Debug.Log("Initializing gameplay");
+        _uiManager.SetUIMenu(Menus.Gameplay);
     }
 
     public void OnStateUpdate()

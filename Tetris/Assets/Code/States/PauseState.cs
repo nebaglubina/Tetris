@@ -1,12 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿
 
 public class PauseState : IState
 {
+    private UIManager _uiManager;
+    public PauseState(UIManager uiManager)
+    {
+        _uiManager = uiManager;
+    }
     public void OnStateInitialize()
     {
-        Debug.Log("Initializing pausestate");
+        _uiManager.SetUIMenu(Menus.Pause);
     }
 
     public void OnStateUpdate()
