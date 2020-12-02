@@ -25,8 +25,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameData.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/GameData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" beforeDir="false" />
@@ -79,7 +82,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/StateFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/ISpawnEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" />
@@ -93,7 +95,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/States/PauseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Sound.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ShapeTypesData.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
@@ -101,7 +102,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" />
@@ -109,8 +109,13 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Data/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
       </list>
     </option>
   </component>
@@ -159,7 +164,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="85427000" />
+      <workItem from="1606682535849" duration="86261000" />
     </task>
     <servers />
   </component>

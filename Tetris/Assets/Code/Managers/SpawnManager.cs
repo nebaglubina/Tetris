@@ -30,7 +30,6 @@ public class SpawnManager : MonoBehaviour
         {
             if (block.childCount <= 1)
             {
-                Debug.Log($"Destroying {block.gameObject}");
                 Destroy(block.gameObject);
             }
         }
