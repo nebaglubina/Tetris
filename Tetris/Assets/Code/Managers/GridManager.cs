@@ -27,6 +27,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void RestartListener(IRestartGameEvent e)
     {
+        Debug.Log("Resetting score");
         ClearBoard();
         _scoreManager.ResetScore();
     }

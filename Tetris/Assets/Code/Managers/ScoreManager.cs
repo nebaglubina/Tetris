@@ -33,5 +33,6 @@ public class ScoreManager
     {
         _score = 0;
         _lines = 0;
+        _uiManager.UpdateUIScore(_score, _lines);
     }
 }
