@@ -12,7 +12,7 @@ public class GameplayState : IState
         _shapeMovement = shapeMovement;
     }
     
-    public void Initialize()
+    public void OnStateInitialize()
     {
         Debug.Log("Initializing gameplay");
         // if (Managers.GameManager.IsGameActive)
@@ -22,11 +22,11 @@ public class GameplayState : IState
         StartGameplay();
     }
 
-    public void Tick()
+    public void OnStateUpdate()
     {
         _shapeMovement.ShapeUpdate();
     }
-    public void Dispose()
+    public void OnStateDispose()
     {
 
     }

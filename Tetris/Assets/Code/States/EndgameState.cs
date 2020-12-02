@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EndgameState : IState
 {
-    public void Initialize()
+    public void OnStateInitialize()
     {
         Debug.Log("Initializing endgame");
         Managers.UIManager.SetUIMenu(Menus.Endgame);
         Managers.GameManager.IsGameActive = false;
     }
 
-    public void Tick()
+    public void OnStateUpdate()
     {
         
     }
 
-    public void Dispose()
+    public void OnStateDispose()
     {
         
     }

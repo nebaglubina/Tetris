@@ -3,14 +3,13 @@ using Zenject;
 
 public class MyMonoInstaller : MonoInstaller
 {
-    [SerializeField] private GameManager _gameManager;
     [SerializeField] private SpawnManager _spawnManager;
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<GridManager>().AsSingle().NonLazy();
         Container.Bind<IStateFactory>().To<StateFactory>().AsSingle().WithArguments(Container);
         
-        Container.BindInterfacesTo<GameManager>().FromInstance(_gameManager).AsSingle().NonLazy();
+        Container.BindInterfacesTo<GameManager>().AsSingle().NonLazy();
         Container.Bind<SpawnManager>().FromInstance(_spawnManager).AsSingle();
         Container.BindInterfacesTo<InputManager>().AsSingle();
         Container.Bind<ScoreManager>().AsSingle();

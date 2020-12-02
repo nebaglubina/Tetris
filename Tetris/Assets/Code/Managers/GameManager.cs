@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class GameManager : MonoBehaviour, IGameManager
+public class GameManager : IGameManager
 {
     private bool _isGameActive = false;
     [Inject]
@@ -25,13 +25,13 @@ public class GameManager : MonoBehaviour, IGameManager
     {
         if (_currentState != null)
         {
-            _currentState.Dispose();
+            _currentState.OnStateDispose();
         }
 
         _currentState = state;
         if (_currentState != null)
         {
-            _currentState.Initialize();
+            _currentState.OnStateInitialize();
             Debug.Log($"Activating state: {state}");
         }
     }
@@ -45,7 +45,12 @@ public class GameManager : MonoBehaviour, IGameManager
     {
         if (_currentState != null)
         {
-            _currentState.Tick();
+            _currentState.OnStateUpdate();
         }
+    }
+
+    public void Dispose()
+    {
+        
     }
 }

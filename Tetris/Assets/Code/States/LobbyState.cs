@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class LobbyState : IState
 {
-    public void Initialize()
+    public void OnStateInitialize()
     {
         Debug.Log("Initializing lobby");
     }
 
-    public void Tick()
+    public void OnStateUpdate()
     {
         
     }
 
-    public void Dispose()
+    public void OnStateDispose()
     {
         
     }

@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PauseState : IState
 {
-    public void Initialize()
+    public void OnStateInitialize()
     {
         Debug.Log("Initializing pausestate");
     }
 
-    public void Tick()
+    public void OnStateUpdate()
     {
         
     }
 
-    public void Dispose()
+    public void OnStateDispose()
     {
         
     }
