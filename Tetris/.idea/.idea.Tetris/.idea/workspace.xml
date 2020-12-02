@@ -22,25 +22,14 @@
     <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/GameData.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Sound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Sound.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/MenuBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/MenuBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gameplay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Board@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Board@3x.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,22 +40,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IStartGameplayEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Editor/DebugLogSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/States/PauseState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IPlaySoundEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IStartGameplayEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Tetris/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Tetris/Assets/Plugins/Zenject/Source/Providers/CachedProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/States/PauseState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,7 +73,6 @@
         <option value="$PROJECT_DIR$/Assets/Code/States/StateFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/ISpawnEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IRestartGameEvent.cs" />
@@ -99,9 +88,7 @@
         <option value="$PROJECT_DIR$/Assets/Code/ShapeTypesData.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IPlaySoundEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/GameData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" />
@@ -111,11 +98,16 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Extensions/DebugLogSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Editor/DebugLogSwitcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
       </list>
     </option>
   </component>
@@ -164,7 +156,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="86261000" />
+      <workItem from="1606682535849" duration="89713000" />
     </task>
     <servers />
   </component>

@@ -9,8 +9,6 @@ public class MyMonoInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<GridManager>().AsSingle().NonLazy();
-        //Container.Bind<IStateFactory>().To<StateFactory>().AsSingle().WithArguments(Container); //todo delete
-        
         Container.BindInterfacesTo<GameManager>().AsSingle().NonLazy();
         Container.Bind<SpawnManager>().FromInstance(_spawnManager).AsSingle();
         Container.Bind<UIManager>().FromInstance(_uiManager).AsSingle();

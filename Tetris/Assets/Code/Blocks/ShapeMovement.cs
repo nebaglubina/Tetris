@@ -9,21 +9,22 @@ public class ShapeMovement
     private float lastFallTime;
     private GameObject _shape;
     private GridManager _gridManager;
-
+    
     public ShapeMovement (GridManager gridManager)
     {
         _gridManager = gridManager;
     }
 
-    public void SetTarget(GameObject shape)
+    public void SetTarget(GameObject shape, float normalSpeed, float fastSpeed)
     {
+        _normalTransitionInterval = normalSpeed;
+        _fastTransitionInterval = fastSpeed;
         _shape = shape;
         currentTransitionInterval = _normalTransitionInterval;
         _rotationPivot = _shape.transform.Find("Pivot");
         
         if (!_gridManager.IsValidGridPosition(_shape.transform))
         {
-            Debug.Log("EndGame");
             EventsObserver.Publish(new IEndGameEvent());
             GameObject.Destroy(_shape.gameObject);
         }

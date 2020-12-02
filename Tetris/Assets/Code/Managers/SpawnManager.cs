@@ -8,6 +8,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameData gameData = default;
     [SerializeField] private Transform _shapeParentTransform = default;
     [SerializeField] private Transform _plannedShapeTransform = default;
+    [SerializeField] private float normalSpeed = 0.5f;
+    [SerializeField] private float fastSpeed = 0.2f;
     
     private GameObject _plannedShape;
     private GameObject _spawnedShape;
@@ -44,7 +46,7 @@ public class SpawnManager : MonoBehaviour
             _spawnedShape = Instantiate(_plannedShape, _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
         }
         
-        _shapeMovement.SetTarget(_spawnedShape);
+        _shapeMovement.SetTarget(_spawnedShape, normalSpeed, fastSpeed);
         SpawnPlannedPrefab();
     }
 

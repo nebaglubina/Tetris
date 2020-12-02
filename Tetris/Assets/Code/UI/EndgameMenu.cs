@@ -10,14 +10,12 @@ public class EndgameMenu : MenuBase
 
     private void OnEnable()
     {
-        Debug.Log("Endgame menu enabled");
         _restartButton.onClick.AddListener(RestartGame);
     }
 
     private void OnDisable()
     {
         _restartButton.onClick.RemoveListener(RestartGame);
-        Debug.Log("Endgame menu disabled");
     }
 
     public void RestartGame()

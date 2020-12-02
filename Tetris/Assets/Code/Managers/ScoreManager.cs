@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-
+﻿
 public class ScoreManager
 {
     private int _lineScore = 100;
