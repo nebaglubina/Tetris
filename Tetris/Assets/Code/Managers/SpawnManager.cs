@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
     private void OnDisable()
     {
         EventsObserver.RemoveEventListener<ISpawnEvent>(Spawn);
-        EventsObserver.AddEventListener<IRestartGameEvent>(ClearParentTransform);
+        EventsObserver.RemoveEventListener<IRestartGameEvent>(ClearParentTransform);
     }
 
     private void Spawn(ISpawnEvent e)

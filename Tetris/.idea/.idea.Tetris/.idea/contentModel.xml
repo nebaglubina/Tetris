@@ -37,7 +37,6 @@
               <e p="IGameManager.cs" t="Include" />
               <e p="IInputManager.cs" t="Include" />
             </e>
-            <e p="Managers.cs" t="Include" />
             <e p="ScoreManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />

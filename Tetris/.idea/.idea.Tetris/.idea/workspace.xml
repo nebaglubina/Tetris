@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="" />
+    <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,23 +79,23 @@
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IRestartGameEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IStartGameplayEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IPauseEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/EndgameState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/PauseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
       </list>
     </option>
   </component>
@@ -135,7 +144,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="74534000" />
+      <workItem from="1606682535849" duration="75298000" />
     </task>
     <servers />
   </component>

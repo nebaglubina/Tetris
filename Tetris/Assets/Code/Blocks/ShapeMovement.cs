@@ -20,7 +20,6 @@ public class ShapeMovement
 
     public void SetTarget(GameObject shape)
     {
-        //Debug.Log($"Shape setted: {shape.name}");
         _shape = shape;
         Debug.Log($"Shape setted: {_shape.name}");
         currentTransitionInterval = _normalTransitionInterval;
