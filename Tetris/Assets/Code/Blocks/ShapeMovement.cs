@@ -20,18 +20,28 @@ public class ShapeMovement
 
     public void SetTarget(Shape shape)
     {
+        //Debug.Log($"Shape setted: {shape.name}");
         _shape = shape;
+        Debug.Log($"Shape setted: {_shape.name}");
         currentTransitionInterval = _normalTransitionInterval;
-        _rotationPivot = shape.transform.Find("Pivot");
+        _rotationPivot = _shape.transform.Find("Pivot");
+        
+        if (!_gridManager.IsValidGridPosition(_shape.transform))
+        {
+            Debug.Log("EndGame");
+            EventsObserver.Publish(new IEndGameEvent());
+            GameObject.Destroy(_shape.gameObject);
+        }
     }
 
     public void ShapeUpdate()
     {
         if (_shape == null)
         {
+            Debug.Log("No shape to move");
             return;
         }
-            FreeFall();
+        FreeFall();
     }
 
     public void FastFall(bool isEnabled)

@@ -22,15 +22,14 @@
     <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/ISpawnEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/ISpawnEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gameplay.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Tetris/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Tetris/Assets/Plugins/Zenject/Source/Providers/CachedProvider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -80,19 +80,20 @@
         <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/StateFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/EndgameMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/ISpawnEvent.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/Shape.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +142,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="57598000" />
+      <workItem from="1606682535849" duration="66983000" />
     </task>
     <servers />
   </component>
@@ -229,11 +230,11 @@
       <screen x="0" y="23" width="1440" height="814" />
     </state>
     <state width="1396" height="273" key="GridCell.Tab.3.right/0.23.1440.814/1440.23.1920.1057@0.23.1440.814" timestamp="1606838580389" />
-    <state x="531" y="146" key="RiderGenerateDialog" timestamp="1606770216058">
+    <state x="531" y="146" key="RiderGenerateDialog" timestamp="1606887222886">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="531" y="146" key="RiderGenerateDialog/0.23.1440.811/1440.23.1920.1057@0.23.1440.811" timestamp="1606737309080" />
-    <state x="531" y="146" key="RiderGenerateDialog/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1606770216058" />
+    <state x="531" y="146" key="RiderGenerateDialog/0.23.1440.812/1440.23.1920.1057@0.23.1440.812" timestamp="1606887222886" />
     <state x="531" y="148" key="RiderGenerateDialog/0.23.1440.821/1440.23.1920.1057@0.23.1440.821" timestamp="1606570334540" />
     <state x="220" y="63" key="SettingsEditor" timestamp="1606645785447">
       <screen x="0" y="23" width="1440" height="821" />

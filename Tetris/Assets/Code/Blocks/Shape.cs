@@ -2,34 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-public enum ShapeType
-{
-    I,
-    O,
-    T,
-    S,
-    Z,
-    J,
-    L
-}
+
 public class Shape : MonoBehaviour
 {
-    private ShapeType _shapeType;
-    private ShapeMovement _shapeMovement;
+    // [Inject] private GridManager _gridManager;
 
-    public ShapeMovement ShapeMovement
-    {
-        get => _shapeMovement;
-        set => _shapeMovement = value;
-    }
-
-
-    // private void Start()
+    // private void OnEnable()
     // {
-    //     if (!Managers.GridManager.IsValidGridPosition(transform))
+    //     if (_gridManager.IsValidGridPosition(transform))
     //     {
-    //         Managers.GameManager.SetState(new EndgameState());
+    //         EventsObserver.Publish(new IEndGameEvent());
     //         Destroy(gameObject);
     //     }
     // }

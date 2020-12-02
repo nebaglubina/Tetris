@@ -38,17 +38,20 @@ public class SpawnManager : MonoBehaviour
         if (_plannedShape == null)
         {
             var randomShapeIndex = Random.Range(0, _shapeTypesData.ShapePrefabs.Length);
-            _spawnedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform);
+            _spawnedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
         }
         else
         {
-            _spawnedShape = _plannedShape;
+            _spawnedShape = Instantiate(_plannedShape, _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
         }
 
         var shape = _spawnedShape.GetComponent<Shape>();
         shape.enabled = true;
+        _spawnedShape.transform.position = _shapeParentTransform.position;
+        _spawnedShape.transform.parent = _shapeParentTransform;
+        Debug.Log(shape.gameObject.name);
         _shapeMovement.SetTarget(shape);
-        //SpawnPlannedPrefab();
+        SpawnPlannedPrefab();
     }
 
     private void SpawnPlannedPrefab()

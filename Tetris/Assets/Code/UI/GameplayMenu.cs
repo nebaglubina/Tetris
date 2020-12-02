@@ -10,6 +10,7 @@ public class GameplayMenu : MenuBase
     [SerializeField] private TextMeshProUGUI _linesText;
     [SerializeField] private Button _pauseButton;
     [SerializeField] private Button _unpauseButton;
+    [SerializeField] private Button _restartButton;
     [SerializeField] private GameObject _pausePanel;
     private IStateFactory _stateFactory;
     private IGameManager _gameManager;
@@ -47,7 +48,6 @@ public class GameplayMenu : MenuBase
 
     public void SetPause()
     {
-        //Managers.GameManager.SetState(new PauseState());//Todo
         var state = _stateFactory.Create<PauseState>();
         _gameManager.SetState(state);
         _pausePanel.SetActive(true);
@@ -55,7 +55,6 @@ public class GameplayMenu : MenuBase
 
     public void SetUnpause()
     {
-        //Managers.GameManager.SetState(new GameplayState());//todo
         var state = _stateFactory.Create<GameplayState>();
         _gameManager.SetState(state);
         _pausePanel.SetActive(false);

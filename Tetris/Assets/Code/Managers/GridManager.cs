@@ -31,7 +31,6 @@ public class GridManager: IInitializable
     }
     public bool IsValidGridPosition(Transform shape)
     {
-
         foreach (Transform child in shape)
         {
             if (child.gameObject.tag.Equals("Block"))

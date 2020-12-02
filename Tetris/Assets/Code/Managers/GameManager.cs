@@ -6,10 +6,10 @@ using Zenject;
 
 public class GameManager : MonoBehaviour, IGameManager
 {
-    private bool _isGameActive;
+    private bool _isGameActive = false;
     [Inject]
     private IState _currentState;
-    //private GameplayState _gameplayState;
+
 
     
     public IState CurrentState => _currentState;
@@ -19,22 +19,7 @@ public class GameManager : MonoBehaviour, IGameManager
         get => _isGameActive;
         set => _isGameActive = value;
     }
-
-    private void Awake()
-    {
-        _isGameActive = false;
-    }
-
-    // [Inject]
-    // private void Construct(GameplayState gameplayState)
-    // {
-    //     
-    // }
-
-    private void Start()
-    {
-        SetState(_currentState);
-    }
+    
 
     public void SetState(IState state)
     {
@@ -51,7 +36,12 @@ public class GameManager : MonoBehaviour, IGameManager
         }
     }
 
-    private void Update()
+    public void Initialize()
+    {
+        SetState(_currentState);
+    }
+
+    public void Tick()
     {
         if (_currentState != null)
         {
