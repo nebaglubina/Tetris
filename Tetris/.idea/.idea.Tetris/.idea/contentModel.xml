@@ -10,12 +10,12 @@
         <e p="Code" t="Include">
           <e p="Blocks" t="Include">
             <e p="Column.cs" t="Include" />
-            <e p="Shape.cs" t="Include" />
             <e p="ShapeMovement.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="CustomEvents" t="Include">
               <e p="IEndGameEvent.cs" t="Include" />
+              <e p="IRestartGameEvent.cs" t="Include" />
               <e p="ISpawnEvent.cs" t="Include" />
             </e>
             <e p="Observer" t="Include">

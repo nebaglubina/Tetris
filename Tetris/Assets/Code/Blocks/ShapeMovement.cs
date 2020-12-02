@@ -10,7 +10,7 @@ public class ShapeMovement
     private float _fastTransitionInterval = 0.2f;
     private float currentTransitionInterval = 0.5f;
     private float lastFallTime;
-    private Shape _shape;
+    private GameObject _shape;
     private GridManager _gridManager;
     
     public ShapeMovement (GridManager gridManager)
@@ -18,7 +18,7 @@ public class ShapeMovement
         _gridManager = gridManager;
     }
 
-    public void SetTarget(Shape shape)
+    public void SetTarget(GameObject shape)
     {
         //Debug.Log($"Shape setted: {shape.name}");
         _shape = shape;
@@ -106,7 +106,6 @@ public class ShapeMovement
                 }
             }
             
-            _shape.GetComponent<Shape>().enabled = false;
             _gridManager.PlaceShape();
         }
 

@@ -44,13 +44,8 @@ public class SpawnManager : MonoBehaviour
         {
             _spawnedShape = Instantiate(_plannedShape, _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
         }
-
-        var shape = _spawnedShape.GetComponent<Shape>();
-        shape.enabled = true;
-        _spawnedShape.transform.position = _shapeParentTransform.position;
-        _spawnedShape.transform.parent = _shapeParentTransform;
-        Debug.Log(shape.gameObject.name);
-        _shapeMovement.SetTarget(shape);
+        
+        _shapeMovement.SetTarget(_spawnedShape);
         SpawnPlannedPrefab();
     }
 
