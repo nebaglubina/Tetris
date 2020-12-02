@@ -17,11 +17,12 @@ public class SpawnManager : MonoBehaviour
     private void OnEnable()
     {
         EventsObserver.AddEventListener<ISpawnEvent>(Spawn);
+        EventsObserver.AddEventListener<IRestartGameEvent>(ClearParentTransform);
     }
-
     private void OnDisable()
     {
         EventsObserver.RemoveEventListener<ISpawnEvent>(Spawn);
+        EventsObserver.AddEventListener<IRestartGameEvent>(ClearParentTransform);
     }
 
     private void Spawn(ISpawnEvent e)
@@ -59,12 +60,11 @@ public class SpawnManager : MonoBehaviour
         _plannedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _plannedShapeTransform.position, Quaternion.identity, _plannedShapeTransform);
     }
 
-    private void ClearParentTransform()
+    private void ClearParentTransform(IRestartGameEvent e)
     {
         foreach (Transform shape in _shapeParentTransform)
         {
             Destroy(shape.gameObject);
         }
     }
-    
 }

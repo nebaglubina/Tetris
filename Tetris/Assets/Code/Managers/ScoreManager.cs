@@ -6,8 +6,12 @@ public class ScoreManager
     private float _lineScoreMultiplier = 1.2f;
     private int _score;
     private int _lines;
-    
+    private UIManager _uiManager;
 
+    public ScoreManager(UIManager uiManager)
+    {
+        _uiManager = uiManager;
+    }
 
     public void AddLineScore(int linesCount)
     {
@@ -22,7 +26,7 @@ public class ScoreManager
             _score += (int)(_lineScore * linesCount * _lineScoreMultiplier);
         }
         _lines += linesCount;
-        Managers.UIManager.UpdateUIScore(_score, _lines);
+        _uiManager.UpdateUIScore(_score, _lines);
     }
 
     public void ResetScore()

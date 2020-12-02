@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class GridManager: IInitializable
+public class GridManager: IInitializable, IDisposable
 {
     private Column[] _columns = new Column[10];
 
@@ -18,12 +18,19 @@ public class GridManager: IInitializable
     
     public void Initialize()
     {
+        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
         for (int i = 0; i < 10; i++)
         {
             _columns[i] = new Column(new Transform[20]);
         }
     }
-    
+
+    private void RestartListener(IRestartGameEvent e)
+    {
+        ClearBoard();
+        _scoreManager.ResetScore();
+    }
+
 
     public bool IsInsideBoard(Vector2 position)
     {
@@ -146,7 +153,11 @@ public class GridManager: IInitializable
             }
         }
     }
-    
+
+    public void Dispose()
+    {
+        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
+    }
     public void ClearBoard()
     {
         for (int i = 0; i < 20; i++)

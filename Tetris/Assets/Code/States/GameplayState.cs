@@ -15,11 +15,6 @@ public class GameplayState : IState
     public void OnStateInitialize()
     {
         Debug.Log("Initializing gameplay");
-        // if (Managers.GameManager.IsGameActive)
-        // {
-        //     return;
-        // }
-        StartGameplay();
     }
 
     public void OnStateUpdate()
@@ -29,12 +24,5 @@ public class GameplayState : IState
     public void OnStateDispose()
     {
 
-    }
-    
-    private void StartGameplay()
-    {
-        EventsObserver.Publish(new ISpawnEvent());
-        // Managers.GameManager.IsGameActive = true;
-        // Managers.UIManager.SetUIMenu(Menus.Gameplay);
     }
 }

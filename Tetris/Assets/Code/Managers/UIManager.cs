@@ -15,10 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameplayMenu _gameplayMenu;
     [SerializeField] private EndgameMenu _endgameMenu;
 
-    public MenuBase LobbyMenu => _lobbyMenu;
-    public MenuBase GameplayMenu => _gameplayMenu;
-    public MenuBase EndgameMenu => _endgameMenu;
-    
+
 
     public void SetUIMenu(Menus menu)
     {

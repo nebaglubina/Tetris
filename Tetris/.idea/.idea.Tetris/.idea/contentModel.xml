@@ -15,8 +15,10 @@
           <e p="Extensions" t="Include">
             <e p="CustomEvents" t="Include">
               <e p="IEndGameEvent.cs" t="Include" />
+              <e p="IPauseEvent.cs" t="Include" />
               <e p="IRestartGameEvent.cs" t="Include" />
               <e p="ISpawnEvent.cs" t="Include" />
+              <e p="IStartGameplayEvent.cs" t="Include" />
             </e>
             <e p="Observer" t="Include">
               <e p="EventsObserver.cs" t="Include" />

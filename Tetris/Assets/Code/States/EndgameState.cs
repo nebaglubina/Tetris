@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EndgameState : IState
 {
+    private UIManager _uiManager;
+    public EndgameState(UIManager uiManager)
+    {
+        _uiManager = uiManager;
+    }
+    
     public void OnStateInitialize()
     {
-        Debug.Log("Initializing endgame");
-        Managers.UIManager.SetUIMenu(Menus.Endgame);
-        Managers.GameManager.IsGameActive = false;
+        _uiManager.SetUIMenu(Menus.Endgame);
     }
 
     public void OnStateUpdate()

@@ -454,8 +454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a89c5cd9f03c4af2bc403bd3999483e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManager: {fileID: 1098129018}
   _spawnManager: {fileID: 1098129012}
+  _uiManager: {fileID: 1098129017}
 --- !u!114 &46808387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &290902862
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2285,7 +2285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098129019}
-  - component: {fileID: 1098129018}
   - component: {fileID: 1098129017}
   - component: {fileID: 1098129016}
   - component: {fileID: 1098129012}
@@ -2338,18 +2337,6 @@ MonoBehaviour:
   _lobbyMenu: {fileID: 290902865}
   _gameplayMenu: {fileID: 646783583}
   _endgameMenu: {fileID: 1890136915}
---- !u!114 &1098129018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098129010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97fb7ae0c07ff4c04b8f9d3e1ad491d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1098129019
 Transform:
   m_ObjectHideFlags: 0

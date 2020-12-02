@@ -12,26 +12,20 @@ public class GameplayMenu : MenuBase
     [SerializeField] private Button _unpauseButton;
     [SerializeField] private Button _restartButton;
     [SerializeField] private GameObject _pausePanel;
-    private IStateFactory _stateFactory;
-    private IGameManager _gameManager;
 
-    [Inject]
-    private void Construct(IStateFactory stateFactory, IGameManager gameManager)
-    {
-        _stateFactory = stateFactory;
-        _gameManager = gameManager;
-    }
 
     private void OnEnable()
     {
         _pauseButton.onClick.AddListener(SetPause);
         _unpauseButton.onClick.AddListener(SetUnpause);
+        _restartButton.onClick.AddListener(Restart);
     }
 
     private void OnDisable()
     {
         _pauseButton.onClick.RemoveListener(SetPause);
         _unpauseButton.onClick.AddListener(SetUnpause);
+        _restartButton.onClick.RemoveListener(Restart);
     }
 
     public TextMeshProUGUI ScoreText
@@ -48,15 +42,18 @@ public class GameplayMenu : MenuBase
 
     public void SetPause()
     {
-        var state = _stateFactory.Create<PauseState>();
-        _gameManager.SetState(state);
+        EventsObserver.Publish(new IPauseEvent(true));
         _pausePanel.SetActive(true);
     }
 
     public void SetUnpause()
     {
-        var state = _stateFactory.Create<GameplayState>();
-        _gameManager.SetState(state);
+        EventsObserver.Publish(new IPauseEvent(false));
         _pausePanel.SetActive(false);
+    }
+
+    public void Restart()
+    {
+        EventsObserver.Publish(new IRestartGameEvent());
     }
 }
