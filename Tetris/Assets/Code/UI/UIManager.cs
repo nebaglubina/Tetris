@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
 
     private void SetLobbyMenu()
     {
-        _pauseMenu.gameObject.SetActive(true);
+        _pauseMenu.gameObject.SetActive(false);
         _gameplayMenu.gameObject.SetActive(false);
         _endgameMenu.gameObject.SetActive(false);
         _lobbyMenu.gameObject.SetActive(true);

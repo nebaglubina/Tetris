@@ -1,0 +1,17 @@
+{
+    "name": "MainAssembly",
+    "references": [
+        "UIAssembly",
+        "ExtensionsAssembly",
+        "Zenject",
+        "Zenject-Editor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

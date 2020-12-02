@@ -3,9 +3,9 @@ using Zenject;
 
 public class MyMonoInstaller : MonoInstaller
 {
-    [SerializeField] private SpawnManager _spawnManager;
-    [SerializeField] private UIManager _uiManager;
-    [SerializeField] private AudioManager _audioManager;
+    [SerializeField] private SpawnManager _spawnManager = default;
+    [SerializeField] private UIManager _uiManager = default;
+    [SerializeField] private AudioManager _audioManager = default;
     public override void InstallBindings()
     {
         Container.BindInterfacesAndSelfTo<GridManager>().AsSingle().NonLazy();

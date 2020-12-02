@@ -8,7 +8,7 @@ public class LobbyState : IState
     }
     public void OnStateInitialize()
     {
-        
+        _uiManager.SetUIMenu(Menus.Lobby);
     }
 
     public void OnStateUpdate()

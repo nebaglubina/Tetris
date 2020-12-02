@@ -22,6 +22,7 @@ public class GameManager : IGameManager
         EventsObserver.AddEventListener<IPauseEvent>(PauseListener);
         EventsObserver.AddEventListener<IEndGameEvent>(EndGameListener);
         EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
+        SetState(_lobbyState);
     }
 
     private void RestartListener(IRestartGameEvent e)
@@ -81,7 +82,6 @@ public class GameManager : IGameManager
         if (_currentState != null)
         {
             _currentState.OnStateInitialize();
-            Debug.Log($"Activating state: {state}");
         }
     }
 

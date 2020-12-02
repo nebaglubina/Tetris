@@ -4,8 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private GameData _gameData;
-    private AudioSource _audioSource;
+    [SerializeField] private GameData _gameData = default;
+    private AudioSource _audioSource = default;
 
     private void Awake()
     {

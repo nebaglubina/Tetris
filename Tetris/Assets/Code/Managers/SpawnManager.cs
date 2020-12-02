@@ -5,13 +5,13 @@ using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private GameData gameData;
-    [SerializeField] private Transform _shapeParentTransform;
-    [SerializeField] private Transform _plannedShapeTransform;
+    [SerializeField] private GameData gameData = default;
+    [SerializeField] private Transform _shapeParentTransform = default;
+    [SerializeField] private Transform _plannedShapeTransform = default;
     
     private GameObject _plannedShape;
     private GameObject _spawnedShape;
-    [Inject] private ShapeMovement _shapeMovement;
+    [Inject] private ShapeMovement _shapeMovement = default;
 
     private void OnEnable()
     {
