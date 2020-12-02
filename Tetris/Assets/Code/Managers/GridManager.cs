@@ -1,11 +1,12 @@
 ﻿using System;
-
 using UnityEngine;
 using Zenject;
 
 public class GridManager: IInitializable, IDisposable
 {
-    private Column[] _columns = new Column[10];
+    private int transformsYCount = 20;
+    private int columnsCount = 10;
+    private Column[] _columns;
 
     
     private ScoreManager _scoreManager;
@@ -17,10 +18,11 @@ public class GridManager: IInitializable, IDisposable
     
     public void Initialize()
     {
+        _columns = new Column[columnsCount];
         EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < columnsCount; i++)
         {
-            _columns[i] = new Column(new Transform[20]);
+            _columns[i] = new Column(new Transform[transformsYCount]);
         }
     }
 
@@ -34,7 +36,7 @@ public class GridManager: IInitializable, IDisposable
 
     public bool IsInsideBoard(Vector2 position)
     {
-        return (int) position.x >= 0 && (int) position.x < 10 && (int) position.y >= 0;
+        return (int) position.x >= 0 && (int) position.x < columnsCount && (int) position.y >= 0;
     }
     public bool IsValidGridPosition(Transform shape)
     {
@@ -66,9 +68,9 @@ public class GridManager: IInitializable, IDisposable
     
     public void UpdateGrid(Transform shape)
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < transformsYCount; i++)
         {
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < columnsCount; j++)
             {
                 if (_columns[j]._columnTransform[i] != null)
                 {
@@ -92,7 +94,7 @@ public class GridManager: IInitializable, IDisposable
     private void DeleteRows()
     {
         var fullRowsCount = 0;
-        for (int y = 0; y < 20; y++)
+        for (int y = 0; y < transformsYCount; y++)
         {
             if (IsRowFull(y))
             {
@@ -112,7 +114,7 @@ public class GridManager: IInitializable, IDisposable
 
     private bool IsRowFull(int transformY)
     {
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < columnsCount; ++i)
         {
             if (_columns[i]._columnTransform[transformY] == null)
             {
@@ -126,7 +128,7 @@ public class GridManager: IInitializable, IDisposable
     private void DeleteRow(int transformY)
     {
         Debug.Log("deleting row");
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < columnsCount; ++i)
         {
             GameObject.Destroy(_columns[i]._columnTransform[transformY].gameObject);
             _columns[i]._columnTransform[transformY] = null;
@@ -135,7 +137,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void DecreaseRowsAbove(int rowsCount)
     {
-        for (int i = rowsCount; i < 20; ++i)
+        for (int i = rowsCount; i < transformsYCount; ++i)
         {
             DecreaseRow(i);
         }
@@ -143,7 +145,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void DecreaseRow(int transformY)
     {
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < columnsCount; ++i)
         {
             if (_columns[i]._columnTransform[transformY] != null)
             {
@@ -160,9 +162,9 @@ public class GridManager: IInitializable, IDisposable
     }
     public void ClearBoard()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < transformsYCount; i++)
         {
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j < columnsCount; j++)
             {
                 if (_columns[j]._columnTransform[i] != null)
                 {

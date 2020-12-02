@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Zenject;
+﻿using UnityEngine;
+
 
 public class GameManager : IGameManager
 {
@@ -25,7 +22,6 @@ public class GameManager : IGameManager
         EventsObserver.AddEventListener<IPauseEvent>(PauseListener);
         EventsObserver.AddEventListener<IEndGameEvent>(EndGameListener);
         EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
-        EventsObserver.Publish(new IStartGameplayEvent());
     }
 
     private void RestartListener(IRestartGameEvent e)
