@@ -36,5 +36,6 @@ public class GameplayMenu : MenuBase
     public void SetPause()
     {
         EventsObserver.Publish(new IPauseEvent(true));
+        EventsObserver.Publish(new IPlaySoundEvent("Pause"));
     }
 }

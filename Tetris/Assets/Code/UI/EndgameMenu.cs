@@ -23,5 +23,6 @@ public class EndgameMenu : MenuBase
     public void RestartGame()
     {
         EventsObserver.Publish(new IRestartGameEvent());
+        EventsObserver.Publish(new IPlaySoundEvent("Newgame"));
     }
 }

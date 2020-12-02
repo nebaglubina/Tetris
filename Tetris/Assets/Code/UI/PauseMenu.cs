@@ -22,10 +22,12 @@ public class PauseMenu : MenuBase
     private void Restart()
     {
         EventsObserver.Publish(new IRestartGameEvent());
+        EventsObserver.Publish(new IPlaySoundEvent("Newgame"));
     }
 
     private void Unpause()
     {
         EventsObserver.Publish(new IPauseEvent(false));
+        EventsObserver.Publish(new IPlaySoundEvent("Resume"));
     }
 }

@@ -15,7 +15,6 @@ public class ScoreManager
 
     public void AddLineScore(int linesCount)
     {
-        Debug.Log($"adding score for {linesCount} lines");
         if (linesCount == 1)
         {
             _score += _lineScore;

@@ -1,18 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameData _gameData;
+    private AudioSource _audioSource;
+
+    private void Awake()
     {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        EventsObserver.AddEventListener<IPlaySoundEvent>(Play);
     }
+
+    private void OnDisable()
+    {
+        EventsObserver.AddEventListener<IPlaySoundEvent>(Play);
+    }
+
+    public void Play(IPlaySoundEvent e)
+    {
+        AudioClip sound = Array.Find(_gameData.Clips, s => s.name == e.Name);
+        if (sound != null)
+        {
+          _audioSource.PlayOneShot(sound);
+        }
+    }
+    
 }

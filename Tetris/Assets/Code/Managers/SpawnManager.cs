@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private ShapeTypesData _shapeTypesData;
+    [SerializeField] private GameData gameData;
     [SerializeField] private Transform _shapeParentTransform;
     [SerializeField] private Transform _plannedShapeTransform;
     
@@ -37,8 +37,8 @@ public class SpawnManager : MonoBehaviour
         
         if (_plannedShape == null)
         {
-            var randomShapeIndex = Random.Range(0, _shapeTypesData.ShapePrefabs.Length);
-            _spawnedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
+            var randomShapeIndex = Random.Range(0, gameData.ShapePrefabs.Length);
+            _spawnedShape = Instantiate(gameData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position, Quaternion.identity, _shapeParentTransform.transform);
         }
         else
         {
@@ -55,8 +55,8 @@ public class SpawnManager : MonoBehaviour
         {
             Destroy(_plannedShape.gameObject);
         }
-        var randomShapeIndex = Random.Range(0, _shapeTypesData.ShapePrefabs.Length);
-        _plannedShape = Instantiate(_shapeTypesData.ShapePrefabs[randomShapeIndex], _plannedShapeTransform.position, Quaternion.identity, _plannedShapeTransform);
+        var randomShapeIndex = Random.Range(0, gameData.ShapePrefabs.Length);
+        _plannedShape = Instantiate(gameData.ShapePrefabs[randomShapeIndex], _plannedShapeTransform.position, Quaternion.identity, _plannedShapeTransform);
     }
 
     private void ClearParentTransform(IRestartGameEvent e)

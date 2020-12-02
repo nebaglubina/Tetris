@@ -9,7 +9,7 @@ public class ShapeMovement
     private float lastFallTime;
     private GameObject _shape;
     private GridManager _gridManager;
-    
+
     public ShapeMovement (GridManager gridManager)
     {
         _gridManager = gridManager;
@@ -18,7 +18,6 @@ public class ShapeMovement
     public void SetTarget(GameObject shape)
     {
         _shape = shape;
-        Debug.Log($"Shape setted: {_shape.name}");
         currentTransitionInterval = _normalTransitionInterval;
         _rotationPivot = _shape.transform.Find("Pivot");
         
@@ -55,6 +54,7 @@ public class ShapeMovement
         if (_gridManager.IsValidGridPosition(_shape.transform))
         {
             _gridManager.UpdateGrid(_shape.transform);
+            EventsObserver.Publish(new IPlaySoundEvent("Move"));
         }
         else
         {
@@ -73,6 +73,7 @@ public class ShapeMovement
         if (_gridManager.IsValidGridPosition(_shape.transform))
         {
             _gridManager.UpdateGrid(_shape.transform);
+            EventsObserver.Publish(new IPlaySoundEvent("Rotate"));
         }
         else
         {

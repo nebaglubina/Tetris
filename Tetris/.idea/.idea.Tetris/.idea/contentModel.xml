@@ -16,6 +16,7 @@
             <e p="CustomEvents" t="Include">
               <e p="IEndGameEvent.cs" t="Include" />
               <e p="IPauseEvent.cs" t="Include" />
+              <e p="IPlaySoundEvent.cs" t="Include" />
               <e p="IRestartGameEvent.cs" t="Include" />
               <e p="ISpawnEvent.cs" t="Include" />
               <e p="IStartGameplayEvent.cs" t="Include" />
@@ -28,6 +29,7 @@
               <e p="RemoveDeferredAction.cs" t="Include" />
             </e>
           </e>
+          <e p="GameData.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
@@ -42,7 +44,7 @@
             <e p="UIManager.cs" t="Include" />
           </e>
           <e p="MyMonoInstaller.cs" t="Include" />
-          <e p="ShapeTypesData.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
           <e p="States" t="Include">
             <e p="EndgameState.cs" t="Include" />
             <e p="GameplayState.cs" t="Include" />

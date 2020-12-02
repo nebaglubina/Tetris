@@ -107,6 +107,7 @@ public class GridManager: IInitializable, IDisposable
         if (fullRowsCount > 0)
         {
             _scoreManager.AddLineScore(fullRowsCount);
+            EventsObserver.Publish(new IPlaySoundEvent("Drop"));
         }
 
         EventsObserver.Publish(new ISpawnEvent());
@@ -121,13 +122,11 @@ public class GridManager: IInitializable, IDisposable
                 return false;
             }
         }
-        Debug.Log("Row is full");
         return true;
     }
 
     private void DeleteRow(int transformY)
     {
-        Debug.Log("deleting row");
         for (int i = 0; i < columnsCount; ++i)
         {
             GameObject.Destroy(_columns[i]._columnTransform[transformY].gameObject);
