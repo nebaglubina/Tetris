@@ -25,6 +25,7 @@
               <e p="IRestartGameEvent.cs" t="Include" />
               <e p="ISpawnEvent.cs" t="Include" />
               <e p="IStartGameplayEvent.cs" t="Include" />
+              <e p="IUpdateScoreEvent.cs" t="Include" />
             </e>
             <e p="ExtensionsAssembly.asmdef" t="Include" />
             <e p="Observer" t="Include">
@@ -48,6 +49,7 @@
             <e p="Interfaces" t="Include">
               <e p="IGameManager.cs" t="Include" />
               <e p="IInputManager.cs" t="Include" />
+              <e p="IScoreManager.cs" t="Include" />
             </e>
             <e p="ScoreManager.cs" t="Include" />
             <e p="SpawnManager.cs" t="Include" />
@@ -59,6 +61,14 @@
             <e p="LobbyState.cs" t="Include" />
             <e p="PauseState.cs" t="Include" />
             <e p="StateFactory.cs" t="Include" />
+          </e>
+          <e p="Tests" t="Include">
+            <e p="PlaymodeTests" t="Include">
+              <e p="PlaymodeTests.asmdef" t="Include" />
+              <e p="ScorePlaymodeTest.cs" t="Include" />
+            </e>
+            <e p="ScoreTest.cs" t="Include" />
+            <e p="Tests.asmdef" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="EndgameMenu.cs" t="Include" />
@@ -503,14 +513,6 @@
             <e p="Version.txt" t="Include" />
             <e p="zenject.asmdef" t="Include" />
           </e>
-        </e>
-        <e p="Tests" t="Include">
-          <e p="LinesTest.cs" t="Include" />
-          <e p="PlaymodeTests" t="Include">
-            <e p="EndGameTest.cs" t="Include" />
-            <e p="PlaymodeTests.asmdef" t="Include" />
-          </e>
-          <e p="Tests.asmdef" t="Include" />
         </e>
       </e>
       <e p="ExtensionsAssembly.csproj" t="IncludeRecursive" />

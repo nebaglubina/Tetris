@@ -2,7 +2,9 @@
     "name": "Tests",
     "references": [
         "MainAssembly",
-        "Zenject-TestFramework"
+        "Zenject-TestFramework",
+        "Zenject",
+        "UIAssembly"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"
@@ -12,8 +14,10 @@
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "NSubstitute.dll"
+    ],
     "autoReferenced": true,
     "defineConstraints": []
 }

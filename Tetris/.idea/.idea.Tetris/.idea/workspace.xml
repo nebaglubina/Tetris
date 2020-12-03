@@ -20,8 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/LinesTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/LinesTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/PlaymodeTests.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/PlaymodeTests/EndGameTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/PlaymodeTests/EndGameTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/PlaymodeTests/PlaymodeTests.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/PlaymodeTests/PlaymodeTests.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tests/Tests.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +47,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Tests/PlaymodeTests/ScorePlaymodeTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IStartGameplayEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IUpdateScoreEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IGameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IEndGameEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Editor/DebugLogSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/PauseState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Tests/LinesTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IPlaySoundEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,12 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Code/States/BaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/States/MenuState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/States/Lobby.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/TestScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Vector2Extension.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/States/StateBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/ShapeTypes.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/MyScriptableObjectInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Managers.cs" />
@@ -85,12 +96,10 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/MenuBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/UI/GameplayMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Data/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/Column.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Extensions/DebugLogSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Editor/DebugLogSwitcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Blocks/ShapeMovement.cs" />
@@ -98,12 +107,21 @@
         <option value="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Installers/MyScriptableInstaller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Installers/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Tests/LinesTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Tests/PlaymodeTests/AddScoreTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Tests/PlaymodeTests/ScoreTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Tests/LinesTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Tests/PlaymodeTests/ScorePlaymodeTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Installers/MyMonoInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IUpdateScoreEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Code/Tests/ScoreTest.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +170,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="103956000" />
+      <workItem from="1606682535849" duration="110330000" />
     </task>
     <servers />
   </component>

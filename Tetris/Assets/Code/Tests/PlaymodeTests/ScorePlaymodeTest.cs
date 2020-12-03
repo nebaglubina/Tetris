@@ -2,30 +2,39 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.TestTools;
 using Zenject;
 
 namespace Tests
 {
-    public class LinesTest : ZenjectUnitTestFixture
+    public class ScorePlaymodeTest : ZenjectUnitTestFixture
     {
         [SetUp]
         public override void Setup()
         {
             base.Setup();
-            
+            Container.Bind<ScoreManager>().AsSingle();
         }
-        // A Test behaves as an ordinary method
+
+        
         [Test]
-        public void LinesTestSimplePasses()
+        [TestCase(1, 100)]
+        [TestCase(2, 240)]
+        [TestCase(3, 360)]
+        [TestCase(4, 480)]
+        public void ChangeScoreTest(int lineCount, int expectedResult)
         {
-            // Use the Assert class to test conditions
+            var scoremanager = Container.Resolve<ScoreManager>();
+            scoremanager.AddLineScore(lineCount);
+            
+            Assert.AreEqual(expectedResult, scoremanager.Score);
         }
 
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator LinesTestWithEnumeratorPasses()
+        public IEnumerator EndGameTestWithEnumeratorPasses()
         {
             // Use the Assert class to test conditions.
             // Use yield to skip a frame.

@@ -12,10 +12,10 @@ public class GridManager: IInitializable, IDisposable
     }
     
     private Column[] _columns;
-    private ScoreManager _scoreManager;
+    private IScoreManager _scoreManager;
     private Settings _settings;
 
-    public GridManager(ScoreManager scoreManager, Settings settings)
+    public GridManager(IScoreManager scoreManager, Settings settings)
     {
         _scoreManager = scoreManager;
         _settings = settings;

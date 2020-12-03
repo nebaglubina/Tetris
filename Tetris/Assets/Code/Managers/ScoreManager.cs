@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-public class ScoreManager
+public class ScoreManager :IScoreManager
 {
     [Serializable]
     public class Settings
@@ -12,12 +12,12 @@ public class ScoreManager
     
     private int _score;
     private int _lines;
-    private UIManager _uiManager;
     private Settings _settings;
 
-    public ScoreManager(UIManager uiManager, Settings settings)
+    public int Score => _score;
+
+    public ScoreManager(Settings settings)
     {
-        _uiManager = uiManager;
         _settings = settings;
     }
 
@@ -33,13 +33,13 @@ public class ScoreManager
             _score += (int)(_settings._lineScore * linesCount * _settings._lineScoreMultiplier);
         }
         _lines += linesCount;
-        _uiManager.UpdateUIScore(_score, _lines);
+        EventsObserver.Publish(new IUpdateScoreEvent(_score, _lines));
     }
 
     public void ResetScore()
     {
         _score = 0;
         _lines = 0;
-        _uiManager.UpdateUIScore(_score, _lines);
+        EventsObserver.Publish(new IUpdateScoreEvent(_score, _lines));
     }
 }

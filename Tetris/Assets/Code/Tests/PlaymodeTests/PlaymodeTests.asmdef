@@ -2,7 +2,8 @@
     "name": "PlaymodeTests",
     "references": [
         "MainAssembly",
-        "Zenject-TestFramework"
+        "Zenject-TestFramework",
+        "Zenject"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"

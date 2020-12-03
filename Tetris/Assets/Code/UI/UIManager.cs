@@ -1,4 +1,5 @@
 ﻿
+using System;
 using UnityEngine;
 
 public enum Menus
@@ -16,6 +17,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private PauseMenu _pauseMenu;
 
 
+    private void OnEnable()
+    {
+        EventsObserver.AddEventListener<IUpdateScoreEvent>(UpdateUIScore);
+    }
+
+    private void OnDisable()
+    {
+        EventsObserver.RemoveEventListener<IUpdateScoreEvent>(UpdateUIScore);
+    }
 
     public void SetUIMenu(Menus menu)
     {
@@ -36,10 +46,10 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void UpdateUIScore(int scoreValue, int lines)
+    public void UpdateUIScore(IUpdateScoreEvent e)
     {
-        _gameplayMenu.ScoreText.SetText(scoreValue.ToString());
-        _gameplayMenu.LinesText.SetText(lines.ToString());
+        _gameplayMenu.ScoreText.SetText(e.ScoreValue.ToString());
+        _gameplayMenu.LinesText.SetText(e.LinesValue.ToString());
     }
 
     private void SetLobbyMenu()

@@ -18,7 +18,7 @@ public class MyMonoInstaller : MonoInstaller
         Container.Bind<PauseState>().AsSingle();
         Container.Bind<LobbyState>().AsSingle();
         Container.Bind<EndgameState>().AsSingle();
-        Container.Bind<ScoreManager>().AsSingle();
+        Container.BindInterfacesTo<ScoreManager>().AsSingle();
         Container.BindInterfacesTo<InputManager>().AsSingle();
     }
 }
