@@ -54,25 +54,21 @@ public class SpawnManager : MonoBehaviour
         {
             var randomShapeIndex = Random.Range(0, _gameData.ShapePrefabs.Length);
             _spawnedShape = Instantiate(_gameData.ShapePrefabs[randomShapeIndex], _shapeParentTransform.position,
-                Quaternion.identity, _shapeParentTransform.transform);
+                Quaternion.identity, _shapeParentTransform);
         }
         else
         {
-            _spawnedShape = Instantiate(_plannedShape, _shapeParentTransform.position, Quaternion.identity,
-                _shapeParentTransform.transform);
+            _spawnedShape = _plannedShape;
+            _spawnedShape.transform.position = _shapeParentTransform.position;
+            _spawnedShape.transform.parent = _shapeParentTransform;
         }
-
-        _shapeMovement.SetTarget(_spawnedShape, _settings.NormalSpeed, _settings.FastSpeed);
         SpawnPlannedPrefab();
+        _shapeMovement.SetTarget(_spawnedShape, _settings.NormalSpeed, _settings.FastSpeed);
+
     }
 
     private void SpawnPlannedPrefab()
     {
-        if (_plannedShape != null)
-        {
-            Destroy(_plannedShape.gameObject);
-        }
-
         var randomShapeIndex = Random.Range(0, _gameData.ShapePrefabs.Length);
         _plannedShape = Instantiate(_gameData.ShapePrefabs[randomShapeIndex], _plannedShapeTransform.position,
             Quaternion.identity, _plannedShapeTransform);
