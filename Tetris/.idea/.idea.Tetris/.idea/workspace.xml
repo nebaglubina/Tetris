@@ -22,35 +22,6 @@
     <list default="true" id="0c135b02-3ef8-4ba2-bec3-5e916c485356" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tetris/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/LobbyMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-1@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-1@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-2@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-2@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-4@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-4@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-5@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-5@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-7@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Block/Block-7@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Down@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Down@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Left@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Left@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Right@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Right@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Rotate@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Button-Rotate@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Toggle-Off@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Toggle-Off@3x.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Toggle-On@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprite/Toggle-On@3x.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +39,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Code/Managers/Interfaces/IInputManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/PauseState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/UI/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Tests/LinesTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/Extensions/CustomEvents/IPlaySoundEvent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/GameplayState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Code/States/LobbyState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,6 +103,7 @@
         <option value="$PROJECT_DIR$/Assets/Code/Managers/GridManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Code/Installers/GameSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Tests/LinesTest.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +152,7 @@
       <updated>1606483999743</updated>
       <workItem from="1606484008659" duration="45072000" />
       <workItem from="1606682274551" duration="164000" />
-      <workItem from="1606682535849" duration="95368000" />
+      <workItem from="1606682535849" duration="98602000" />
     </task>
     <servers />
   </component>

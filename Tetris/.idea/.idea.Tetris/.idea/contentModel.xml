@@ -504,12 +504,22 @@
             <e p="zenject.asmdef" t="Include" />
           </e>
         </e>
+        <e p="Tests" t="Include">
+          <e p="LinesTest.cs" t="Include" />
+          <e p="PlaymodeTests" t="Include">
+            <e p="EndGameTest.cs" t="Include" />
+            <e p="PlaymodeTests.asmdef" t="Include" />
+          </e>
+          <e p="Tests.asmdef" t="Include" />
+        </e>
       </e>
       <e p="ExtensionsAssembly.csproj" t="IncludeRecursive" />
       <e p="MainAssembly.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="PlaymodeTests.csproj" t="IncludeRecursive" />
       <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
       <e p="Tetris.sln" t="IncludeFlat" />
       <e p="UIAssembly.csproj" t="IncludeRecursive" />
       <e p="Zenject-Editor.csproj" t="IncludeRecursive" />
