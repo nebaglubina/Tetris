@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnDisable()
     {
-        EventsObserver.AddEventListener<IPlaySoundEvent>(Play);
+        EventsObserver.RemoveEventListener<IPlaySoundEvent>(Play);
     }
 
     public void Play(IPlaySoundEvent e)

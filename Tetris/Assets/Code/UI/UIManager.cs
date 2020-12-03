@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private EndgameMenu _endgameMenu;
     [SerializeField] private PauseMenu _pauseMenu;
 
+    public GameplayMenu GameplayMenu => _gameplayMenu;
+
 
     private void OnEnable()
     {

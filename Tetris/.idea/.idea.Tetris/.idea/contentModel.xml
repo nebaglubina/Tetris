@@ -65,7 +65,7 @@
           <e p="Tests" t="Include">
             <e p="PlaymodeTests" t="Include">
               <e p="PlaymodeTests.asmdef" t="Include" />
-              <e p="ScorePlaymodeTest.cs" t="Include" />
+              <e p="ScoreChangeUITest.cs" t="Include" />
             </e>
             <e p="ScoreTest.cs" t="Include" />
             <e p="Tests.asmdef" t="Include" />
