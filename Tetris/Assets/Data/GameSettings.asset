@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53b9fe29569d4f6b86401abcf290ea7, type: 3}
+  m_Name: GameSettings
+  m_EditorClassIdentifier: 
+  ScoreSettings:
+    _lineScore: 100
+    _lineScoreMultiplier: 1.2
+  GridSettings:
+    TransformsYCount: 20
+    ColumnsCount: 10
+  SpawnSettings:
+    NormalSpeed: 0.5
+    FastSpeed: 0.2

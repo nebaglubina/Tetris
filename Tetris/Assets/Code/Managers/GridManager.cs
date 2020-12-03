@@ -4,39 +4,38 @@ using Zenject;
 
 public class GridManager: IInitializable, IDisposable
 {
-    private int transformsYCount = 20;
-    private int columnsCount = 10;
-    private Column[] _columns;
-
+    [Serializable]
+    public class Settings
+    {
+        public int TransformsYCount = 20;
+        public int ColumnsCount = 10;
+    }
     
+    private Column[] _columns;
     private ScoreManager _scoreManager;
+    private Settings _settings;
 
-    public GridManager(ScoreManager scoreManager)
+    public GridManager(ScoreManager scoreManager, Settings settings)
     {
         _scoreManager = scoreManager;
+        _settings = settings;
     }
     
     public void Initialize()
     {
-        _columns = new Column[columnsCount];
-        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
-        for (int i = 0; i < columnsCount; i++)
+        _columns = new Column[_settings.ColumnsCount];
+        for (int i = 0; i < _settings.ColumnsCount; i++)
         {
-            _columns[i] = new Column(new Transform[transformsYCount]);
+            _columns[i] = new Column(new Transform[_settings.TransformsYCount]);
         }
+        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
     }
-
-    private void RestartListener(IRestartGameEvent e)
-    {
-        ClearBoard();
-        _scoreManager.ResetScore();
-    }
-
-
+    
     public bool IsInsideBoard(Vector2 position)
     {
-        return (int) position.x >= 0 && (int) position.x < columnsCount && (int) position.y >= 0;
+        return (int) position.x >= 0 && (int) position.x < _settings.ColumnsCount && (int) position.y >= 0;
     }
+    
     public bool IsValidGridPosition(Transform shape)
     {
         foreach (Transform child in shape)
@@ -58,8 +57,7 @@ public class GridManager: IInitializable, IDisposable
 
         return true;
     }
-
-
+    
     public void PlaceShape()
     {
         DeleteRows();
@@ -67,9 +65,9 @@ public class GridManager: IInitializable, IDisposable
     
     public void UpdateGrid(Transform shape)
     {
-        for (int i = 0; i < transformsYCount; i++)
+        for (int i = 0; i < _settings.TransformsYCount; i++)
         {
-            for (int j = 0; j < columnsCount; j++)
+            for (int j = 0; j < _settings.ColumnsCount; j++)
             {
                 if (_columns[j]._columnTransform[i] != null)
                 {
@@ -93,7 +91,7 @@ public class GridManager: IInitializable, IDisposable
     private void DeleteRows()
     {
         var fullRowsCount = 0;
-        for (int y = 0; y < transformsYCount; y++)
+        for (int y = 0; y < _settings.TransformsYCount; y++)
         {
             if (IsRowFull(y))
             {
@@ -114,7 +112,7 @@ public class GridManager: IInitializable, IDisposable
 
     private bool IsRowFull(int transformY)
     {
-        for (int i = 0; i < columnsCount; ++i)
+        for (int i = 0; i < _settings.ColumnsCount; ++i)
         {
             if (_columns[i]._columnTransform[transformY] == null)
             {
@@ -126,7 +124,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void DeleteRow(int transformY)
     {
-        for (int i = 0; i < columnsCount; ++i)
+        for (int i = 0; i < _settings.ColumnsCount; ++i)
         {
             GameObject.Destroy(_columns[i]._columnTransform[transformY].gameObject);
             _columns[i]._columnTransform[transformY] = null;
@@ -135,7 +133,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void DecreaseRowsAbove(int rowsCount)
     {
-        for (int i = rowsCount; i < transformsYCount; ++i)
+        for (int i = rowsCount; i < _settings.TransformsYCount; ++i)
         {
             DecreaseRow(i);
         }
@@ -143,7 +141,7 @@ public class GridManager: IInitializable, IDisposable
 
     private void DecreaseRow(int transformY)
     {
-        for (int i = 0; i < columnsCount; ++i)
+        for (int i = 0; i < _settings.ColumnsCount; ++i)
         {
             if (_columns[i]._columnTransform[transformY] != null)
             {
@@ -153,16 +151,12 @@ public class GridManager: IInitializable, IDisposable
             }
         }
     }
-
-    public void Dispose()
-    {
-        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
-    }
+    
     public void ClearBoard()
     {
-        for (int i = 0; i < transformsYCount; i++)
+        for (int i = 0; i < _settings.TransformsYCount; i++)
         {
-            for (int j = 0; j < columnsCount; j++)
+            for (int j = 0; j < _settings.ColumnsCount; j++)
             {
                 if (_columns[j]._columnTransform[i] != null)
                 {
@@ -172,4 +166,16 @@ public class GridManager: IInitializable, IDisposable
             }
         }
     }
+    
+    private void RestartListener(IRestartGameEvent e)
+    {
+        ClearBoard();
+        _scoreManager.ResetScore();
+    }
+    
+    public void Dispose()
+    {
+        EventsObserver.AddEventListener<IRestartGameEvent>(RestartListener);
+    }
+
 }

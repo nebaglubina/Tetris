@@ -1,27 +1,36 @@
 ﻿
+using System;
+
 public class ScoreManager
 {
-    private int _lineScore = 100;
-    private float _lineScoreMultiplier = 1.2f;
+    [Serializable]
+    public class Settings
+    {
+        public int _lineScore = 100;
+        public float _lineScoreMultiplier = 1.2f;
+    }
+    
     private int _score;
     private int _lines;
     private UIManager _uiManager;
+    private Settings _settings;
 
-    public ScoreManager(UIManager uiManager)
+    public ScoreManager(UIManager uiManager, Settings settings)
     {
         _uiManager = uiManager;
+        _settings = settings;
     }
 
     public void AddLineScore(int linesCount)
     {
         if (linesCount == 1)
         {
-            _score += _lineScore;
+            _score += _settings._lineScore;
         }
         
         else
         {
-            _score += (int)(_lineScore * linesCount * _lineScoreMultiplier);
+            _score += (int)(_settings._lineScore * linesCount * _settings._lineScoreMultiplier);
         }
         _lines += linesCount;
         _uiManager.UpdateUIScore(_score, _lines);
