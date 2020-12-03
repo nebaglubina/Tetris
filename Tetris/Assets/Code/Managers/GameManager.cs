@@ -9,8 +9,6 @@ public class GameManager : IGameManager
     private EndgameState _endgameState;
     private IState _currentState;
 
-    public IState CurrentState => _currentState;
-    
     public GameManager(GameplayState gameplayState, PauseState pauseState, LobbyState lobbyState, EndgameState endgameState)
     {
         _gameplayState = gameplayState;
